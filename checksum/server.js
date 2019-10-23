@@ -64,6 +64,7 @@ http.createServer(function (req, res) {
 					html += x + " => " + post_data[x] + "<br/>";
 				}
 				html += "<br/><br/>";
+				
 
 
 				// verify the checksum
@@ -112,7 +113,6 @@ http.createServer(function (req, res) {
 							for(var x in _result){
 								html += x + " => " + _result[x] + "<br/>";
 							}
-
 							res.writeHead(200, {'Content-Type': 'text/html'});
 							res.write(html);
 							res.end();
